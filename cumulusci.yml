@@ -1,0 +1,28 @@
+minimum_cumulusci_version: '3.76.0'
+project:
+    name: Loyalty-Referral-Marketing---Referral-event-Invocable-Action
+    package:
+        name: Loyalty-Referral-Marketing---Referral-event-Invocable-Action
+        api_version: '60.0'
+    git:
+        default_branch: 'main'
+        prefix_feature: 'feature/'
+        prefix_beta: 'beta/'
+        prefix_release: 'release/'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/Loyalty-Referral-Marketing---Referral-event-Invocable-Action/tests
+            options:
+                outputdir: robot/Loyalty-Referral-Marketing---Referral-event-Invocable-Action/results
+
+    robot_testdoc:
+        options:
+            path: robot/Loyalty-Referral-Marketing---Referral-event-Invocable-Action/tests
+            output: robot/Loyalty-Referral-Marketing---Referral-event-Invocable-Action/doc/Loyalty-Referral-Marketing---Referral-event-Invocable-Action_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
